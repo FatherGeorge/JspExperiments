@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws IOException, ServletException {
         String name = request.getParameter("name");
-        String pass = request.getParameter("pass");
+        String pass = request.getParameter("password");
 
         if (loginService.isUserValid(name, pass)) {
             request.getSession().setAttribute("name", name);

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/todo.do")
-public class TodoServlet extends HttpServlet {
+public class ListTodoServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private TodoService todoService = new TodoService();
 
@@ -17,20 +17,5 @@ public class TodoServlet extends HttpServlet {
             throws IOException, ServletException {
         request.setAttribute("todos", todoService.retrieveTodos());
         request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
-        String todo = request.getParameter("todo");
-
-        if ("".equals(todo)) {
-            request.setAttribute("errorMessage", "Enter a valid todo");
-        } else {
-            todoService.addTodo(todo);
-        }
-        request.setAttribute("todos", todoService.retrieveTodos());
-        request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request, response);
-
     }
 }
