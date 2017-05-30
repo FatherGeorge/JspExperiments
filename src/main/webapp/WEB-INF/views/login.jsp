@@ -25,7 +25,7 @@
 
     <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="/todo.do">Todos</a></li>
+        <li><a href="/add-todo.do">Todos</a></li>
         <li><a href="http://www.in28minutes.com">In28Minutes</a></li>
     </ul>
 
@@ -40,9 +40,9 @@
         <p>
             <font color="red">${errorMessage}</font>
         </p>
-        Name: <input type="text" name="name" /> Password:<input
-            type="password" name="password" /> <input type="submit"
-                                                      value="Login" />
+        Name:    <input type="text" name="name" />
+        Password:<input type="password" name="password" />
+                 <input type="submit" value="Login" />
     </form>
 
 </div>

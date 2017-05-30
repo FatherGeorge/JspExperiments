@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/todo.do")
+@WebServlet(urlPatterns = "/list-todos.do")
 public class ListTodoServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private TodoService todoService = new TodoService();
@@ -16,6 +16,6 @@ public class ListTodoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         request.setAttribute("todos", todoService.retrieveTodos());
-        request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/views/list-todos.jsp").forward(request, response);
     }
 }
