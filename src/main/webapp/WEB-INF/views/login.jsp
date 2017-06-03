@@ -1,23 +1,4 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Todos</title>
-    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-          rel="stylesheet">
-
-    <style>
-        .footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 60px;
-            background-color: #f5f5f5;
-        }
-    </style>
-</head>
-<body>
+<%@ include file="../common/header.jspf"%>
 
 <nav class="navbar navbar-default">
 
@@ -47,11 +28,4 @@
 
 </div>
 
-<footer class="footer">
-    <div>footer content</div>
-</footer>
-
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</body>
-</html>
+<%@ include file="../common/footer.jspf"%>
